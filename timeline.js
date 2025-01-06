@@ -41,4 +41,4 @@ for (var i = 0; i < doneSections && i < moviesTime.length; i++) {
     var leftHours = ((leftTime/60).toFixed(1)).split('.');
 }
 console.log("There are " + leftTime + " minutes " + "or " + leftHours[0] + ":" + (leftHours[1] * 6) + " hours remain ")
-console.log("you have watched " + spentedTime + " minutes " + "or " + spentedHours[0] + ":" + (spentedHours[1] * 6) + " hours remain ")
+console.log("you have watched " + spentedTime + " minutes " + "or " + spentedHours[0] + ":" + (spentedHours[1] * 6) + " hours")
