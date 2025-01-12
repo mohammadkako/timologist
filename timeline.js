@@ -26,7 +26,7 @@ console.log('All of these movies are ' + wholeMins + ' minutes ' + 'or ' + whole
 
 
 
-var doneSections = 4;
+var doneSections = 7;
 var spentedMin = 0
 var spentedSec = 0
 
