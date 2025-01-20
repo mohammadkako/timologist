@@ -2,43 +2,50 @@
 
 
 
-var moviesTime = [[8,2],[11,14],[15,46],[9,50],[12,40],[7,36],[5,15],[17,11],[6,47],[13,45],[13,24],[11,12],[9,35],[8,52],[21,24],[20,48],[7,19],[20,1],[22,9],[16,24],[15,6],[20,36],[13,49],[16,3],[9,12],[15,9],[22,27],[15,54],[18,39],[11,6],[20,49],[22,34],[13,54]]
-console.log("there is " + moviesTime.length + " movie to watch")
+let moviesTime = [[8,2],[11,14],[15,46],[9,50],[12,40],[7,36],[5,15],[17,11],[6,47],[13,45],[13,24],[11,12],[9,35],[8,52],[21,24],[20,48],[7,19],[20,1],[22,9],[16,24],[15,6],[20,36],[13,49],[16,3],[9,12],[15,9],[22,27],[15,54],[18,39],[11,6],[20,49],[22,34],[13,54]]
+//تمام قسمت های دوره اضافه میشه//
+console.log(`There are ${moviesTime.length} movies to watch.`)
+
+//تعداد دوره اضافه میشه و ازش لاگ گرفته میشه//
 
 
 
 
-
-var min = 0
-var sec = 0
-
-for (var i = 0; i < moviesTime.length; i++) {
-    min += moviesTime[i][0];
-    sec += moviesTime[i][1];
-    var wholeMins = ((Math.round(sec/60)) + min);
-    var wholeTime = ((wholeMins/60).toFixed(1)).split('.');
+let min = 0
+let sec = 0
+for (let eachPart of moviesTime){
+    min += eachPart[0];
+    sec += eachPart[1];
 }
-console.log('All of these movies are ' + wholeMins + ' minutes ' + 'or ' + wholeTime[0] + ':' + (wholeTime[1] * 6) + ' hours' )
+//کل قسمت های دوره پیمایش میشه//
+let wholeMins = ((Math.round(sec/60)) + min);
+//کل دقایق دوره به دست میاد//
+let wholeHours = ((wholeMins/60).toFixed(1)).split('.');
+//کل ساعات دوره بر حسب ساعت و اعشار به دست میاد و با اسپلیت ازش آرایه دو بعدی ایجاد میشه//
+//برای تبدیل قسمت اعشاری به دقیقه اونو ضربدر 6 میکنیم(همراه با کنسول گرفتن انجام شده)
+
+console.log(`All of these movies are ${wholeMins} minutes or ${wholeHours[0]}:${(wholeHours[1] * 6)} hours.`)
 
 
 
+let doneSections = 22
+let spentedMins = 0
+let spentedSecs = 0
 
-
-
-
-var doneSections = 18;
-var spentedMin = 0
-var spentedSec = 0
-
-for (var i = 0; i < doneSections && i < moviesTime.length; i++) {
-    spentedMin += moviesTime[i][0];
-    spentedSec += moviesTime[i][1];
-
-    var spentedTime = (Math.round(spentedSec/60) + spentedMin);
-    var spentedHours = ((spentedTime/60).toFixed(1)).split('.');
-
-    var leftTime = wholeMins - spentedTime;
-    var leftHours = ((leftTime/60).toFixed(1)).split('.');
+for (let i = 0; i < doneSections && i < moviesTime.length; i++) {
+        spentedMins += moviesTime[i][0];
+        spentedSecs += moviesTime[i][1];
 }
-console.log("There are " + leftTime + " minutes " + "or " + leftHours[0] + ":" + (leftHours[1] * 6) + " hours remain ")
-console.log("you have watched " + spentedTime + " minutes " + "or " + spentedHours[0] + ":" + (spentedHours[1] * 6) + " hours")
+// قسمت هایی که تماشا شده رو پیمایش میکنه//
+let watchedMins = (Math.round(spentedSecs/60) + spentedMins);
+//کل دقایق مشاهده به دست میاد//
+let watchedHours = ((watchedMins/60).toFixed(1)).split('.');
+//کل ساعات مشاهده بر حسب ساعت و اعشار به دست میاد و با اسپلیت آرایه دو بعدی ایجاد میشه//
+let leftMins = wholeMins - watchedMins;
+//کل دقایق باقی مانده از دوره به دست میاد //
+let leftHours = ((leftMins/60).toFixed(1)).split('.');
+//کل ساعات باقی مونده بر حسب ساعت و اعشار به دست میاد و با اسپلیت آرایه دو بعدی ایجاد میشه//
+
+console.log(`There are ${leftMins} minutes or ${leftHours[0]}:${(leftHours[1] * 6)} hours remain.`)
+console.log(`You have watched ${watchedMins} minutes or ${watchedHours[0]}:${(watchedHours[1] * 6)} hours.`)
+
