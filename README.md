@@ -6,7 +6,7 @@ Do you have a collection of videos or music with varying durations and want to k
 
 Here are some additional features:
 
-2. **Watched and Remaining Time:** If you specify the sections you've already watched in the `doneSections` variable, Timologist will calculate and display both the total watched time and the remaining time in the console.
+2. **Watched and Remaining Time:** If you specify the sections you've already watched in the `watchedSections` variable, Timologist will calculate and display both the total watched time and the remaining time in the console.
 
 ==================================================
 
