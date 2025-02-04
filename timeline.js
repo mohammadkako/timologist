@@ -31,11 +31,11 @@ console.log(`All of these movies are ${wholeMins} minutes or ${wholeHours[0]}:${
 
 
 
-let doneSections = 22 //قسمت های تماشا شده رو اضافه میکنیم//
+let watchedSections = 28 //قسمت های تماشا شده رو اضافه میکنیم//
 let spentedMins = 0
 let spentedSecs = 0
 
-for (let i = 0; i < doneSections && i < moviesTime.length; i++) {
+for (let i = 0; i < watchedSections && i < moviesTime.length; i++) {
         spentedMins += moviesTime[i][0];
         spentedSecs += moviesTime[i][1];
 }
