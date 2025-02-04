@@ -2,11 +2,11 @@
 
 Do you have a collection of videos or music with varying durations and want to know the total playback time? Manually calculating this can be time-consuming and prone to error. Timologist can help!
 
-1. **Total Collection Time:** To calculate the total time of your collection, open the `timeline.js` file and populate the `moviesTime` array. This array should contain two-dimensional arrays representing the duration of each item in minutes and seconds, like this: `[[minutes, seconds], [minutes, seconds], [minutes, seconds], ...]`. The total playback time will then be displayed in the console.
+**Total Collection Time:** To calculate the total time of your collection, open the `timeline.js` file and populate the `moviesTime` array. This array should contain two-dimensional arrays representing the duration of each item in minutes and seconds, like this: `[[minutes, seconds], [minutes, seconds], [minutes, seconds], ...]`. The total playback time will then be displayed in the console.
 
 Here are some additional features:
 
-2. **Watched and Remaining Time:** If you specify the sections you've already watched in the `watchedSections` variable, Timologist will calculate and display both the total watched time and the remaining time in the console.
+**Watched and Remaining Time:** If you specify the sections you've already watched in the `watchedSections` variable, Timologist will calculate and display both the total watched time and the remaining time in the console.
 
 ==================================================
 
